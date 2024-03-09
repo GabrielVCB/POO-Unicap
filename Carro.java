@@ -1,28 +1,41 @@
 import java.util.Scanner;
+
+/**
+ * index
+ */
 public class Carro {
 
-    public mensagem calcularConsumo(int km, int litros) {
-        if (result < 8) {
-            return Mensagem.VENDA;
-        } else if (result >=8 && result)
+  enum Mensagem {
+    VENDA, ECONOMICO, SUPER_ECONOMICO
+  }
+
+  public Mensagem calcularConsumo(int km, int litros) {
+    float result = km / litros;
+
+    if (result < 8) {
+      return Mensagem.VENDA;
+    } else if (result >= 8 && result <= 14) {
+      return Mensagem.ECONOMICO;
+    } else {
+      return Mensagem.SUPER_ECONOMICO;
     }
+  }
 
-    
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    int distance = 0;
+    int liters = 0;
 
-        int distance = 0;
-        int liters = 0;
-        System.out.printf("Digite a distância em km: ");
-        distance = sc.nextInt();
-        System.out.printf("Digite os litros consumidos: ");
-        liters = sc.nextInt();
+    System.out.print("Digite a distância em Km: ");
+    distance = scanner.nextInt();
 
-        System.out.println(distance);
-        System.out.println(liters);
+    System.out.print("Digite a quantidade de litros: ");
+    liters = scanner.nextInt();
 
-        Carro carro = new Carro();
-        carro.calcularConsumo(distance, liters);
-    }
+    Carro carro = new Carro();
+
+    Mensagem msg = carro.calcularConsumo(distance, liters);
+    System.out.println("Status do carro:" + msg);
+  }
 }
