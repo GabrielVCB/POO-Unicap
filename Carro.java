@@ -37,5 +37,7 @@ public class Carro {
 
     Mensagem msg = carro.calcularConsumo(distance, liters);
     System.out.println("Status do carro:" + msg);
+
+    scanner.close();
   }
 }
