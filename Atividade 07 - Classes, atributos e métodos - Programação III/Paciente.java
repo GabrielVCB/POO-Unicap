@@ -1,4 +1,4 @@
-//Quesão 1
+//Questão 1
 
 public class Paciente {
     int codigo;
