@@ -8,5 +8,6 @@ public class test3 {
         String busca = sc.nextLine();
         Livro livro = new Livro("Narnia", "Lewis", 1985);
         livro.listar(busca);
+        sc.close();
     }
 }

@@ -22,6 +22,15 @@ public class Carro {
             this.velAtual += incremento;
         }
     }
-    
+    public String getMarca() {
+        return marca;
+    }
 
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getAnoFabricacao() {
+        return anoFabricacao;
+    }
 }
