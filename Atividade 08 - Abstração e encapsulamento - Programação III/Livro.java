@@ -10,7 +10,11 @@ public class Livro {
         this.anoPubli = anoPubli;
     }
     
-    public void listar(String titulo) {
-        System.out.printf("Livro pesquisado: %s\nAutor: %s\nAno de publicacao: %d\n",this.titulo,this.autor,this.anoPubli);
+    public void listar(String tituloBuscado) {
+        if (this.titulo.equals(tituloBuscado)) {
+            System.out.printf("Livro pesquisado: %s\nAutor: %s\nAno de publicacao: %d\n", this.titulo, this.autor, this.anoPubli);
+        } else {
+            System.out.println("Livro não encontrado.");
+        }
     }
 }
