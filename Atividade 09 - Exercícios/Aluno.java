@@ -23,9 +23,9 @@ public class Aluno {
         }
         double media = soma / notas.length;
         if(media >= 7) {
-            System.out.printf("Aluno %s aprovado!",this.nome);
+            System.out.printf("Aluno %s aprovado!\n",this.nome);
         } else {
-            System.out.printf("Aluno %s reprovado!",this.nome);
+            System.out.printf("Aluno %s reprovado!\n",this.nome);
         }
     }
 
