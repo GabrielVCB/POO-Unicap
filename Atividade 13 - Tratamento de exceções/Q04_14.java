@@ -16,7 +16,7 @@ public class Q04_14 {
                     if (newVetor == 0) break;
                 } catch (InputMismatchException error) {
                     System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
-                    sc.next(); // Limpa a entrada inválida
+                    sc.next();
                 } catch (ArrayIndexOutOfBoundsException error) {
                     System.out.println("Limite de 10 números atingido.");
                     break;

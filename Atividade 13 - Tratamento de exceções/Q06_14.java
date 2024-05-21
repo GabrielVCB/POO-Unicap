@@ -42,10 +42,12 @@ class ContaCorrente {
 public class Q06_14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o saldo inicial da conta:");
         double newSaldo = sc.nextDouble();
         ContaCorrente conta = new ContaCorrente(123, newSaldo);
         for (int i = 0; i < 10; i++) {
             try {
+                System.out.println("Digite o valor do saque:");
                 double newSaque = sc.nextDouble();
                 conta.sacar(newSaque);
                 System.out.println(conta.getSaldo());
